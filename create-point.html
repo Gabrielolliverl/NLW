@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--
 
-    HTML
-
-    Hypertext
-        hiper texto
-
-
-        Markup
-            preparação de texto 
-
-
-
-
-        Language
-            linguagem 
-
-
--->
 
 
 <head>
@@ -53,6 +35,47 @@
             <form action="">
 
                 <h1>Cadastro do ponto de coleta</h1>
+
+                <fieldset>
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+                </fieldset>
+
+                <div class="field">
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name = "name">
+                </div>
+
+                <div class="field-group">
+
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name = "address">
+                    </div>
+                    <div class="field">
+                        <label for="">Número/Complemento</label>
+                        <input type="text" name= "address2" >
+                    </div>
+                </div>
+                
+                <div class="field-group">
+                    <div class="field">
+                        <label for="">Estado</label>
+                        <select name="state">
+                        <option value="">Selecione o estado</option>
+                        </select>
+                    </div>
+                        <div class="field">
+                        <label for="">Cidade</label>
+                        <select name="city" disabled>
+                        <option value="">Selecione a cidade</option>
+                        </select>
+                    </div>                    
+                </div>
+                
+
+                <button type="submit">Cadastro do ponto de coleta</button>
 
 
             </form>
