@@ -42,8 +42,8 @@ function getCities(event) {
 }
 
 document
-            .querySelector('select[name=uf]')
-            .addEventListener('change', getCities)
+        .querySelector('select[name=uf]')
+        .addEventListener('change', getCities)
 
 // Selecionar os li do fieldset items de coleta
 // Pegar todos os li
