@@ -78,6 +78,6 @@ function handleSelectedItem(event) {
 
     console.log(seletctedItems);
    // Atualizar o campo escondido com os itens selecionados
-   // document.querySelector('input[name=items]')
+   
    collectedItems.value = seletctedItems
 }
