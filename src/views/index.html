@@ -1,95 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<!--
-    HTML
-    Hypertext
-        hiper texto
-        Markup
-            preparação de texto 
+<!--Usando nunjcks tamplate engine para criar herança-->
+    {% extends "partials/layout.html" %}
 
-        Language
-            linguagem 
--->
+    {% set pageId = "page-home" %}
 
-<head>
+   {% block styles %}
+   <link rel="stylesheet" href="/styles/home.css"> 
+   <link rel="stylesheet" href="/styles/modal.css"> 
+   <link rel="stylesheet" href="/styles/responsive-home.css">
+    {% endblock styles %}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="Styles/main.css">
-    <link rel="stylesheet" href="Styles/home.css">
-    <link rel="stylesheet" href="Styles/modal.css">
-    
-     
-    <link rel="stylesheet" href="Styles/responsive.css">
-
-</head>
-<body>
-
-    <div id="page-home">
-
-        <div class="content ">
+    {% block content %}
+        <div class="content">
 
             <header>
-                <img src="/assets/logo.svg" alt="Logomarca">
-                <a href="create-point.html">
-                    <spam>
-
-                    </spam>  
-                    Cadastre um ponto de coleta 
-                </a>
+                <img src="./assets/icones/logo.svg" alt="Logomarca">
+                <a href="create-point">
+                    <span></span>
+                    Cadastre um ponto de coleta</a>
             </header>
 
-            
             <main>
-
-                
-            <h1>Seu MarketPlace de coleta de residuos </h1>
-
-            <p>Ajudamos pessoas a encontrarem pontos de coletas de forma eficiente.</p>
-            
-            <a href="#">
-                <spam></spam><strong>Pesquisar pontos de coletar</strong>
-                
-            </a>
-
-
+                <h1>Seu marketplace de coleta de resíduos</h1>
+                <p>Ajudamos pessoas a encontrarem um ponto de coleta eficiente</p>
+                <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
             </main>
-    
+
         </div>
+    {% endblock content %}
 
-    </div>
+      <!--Usando tamplate Engine do nunjucks-->
+    {% block modal %}
+        {% include "partials/modal.html" %}
+    {% endblock modal %}
 
-    <div id="modal" class="hide">
+    {% block scripts %}
+      <script src="scripts/index.js"></script>
+    {% endblock scripts %}
 
-        <div class="content">
-            <div class="header">
-                <h1>Pontos de coleta</h1>
-                <a href="#">Fechar</a>
-            </div>
-            <form action="/search-results.html">
-                <label for="search">Cidade</label>
-                <div class="search field">
-                    <input 
-                    type="text" 
-                    name="search"
-                    placeholder="Pesquise por cidade"
-                    >
-
-                    <button> 
-                        <img src="/assets/search.svg" alt="Buscar">
-                    </button>
-                </div>
-            </form>    
-        </div>
-    </div>
-
-
-
-
-    <script src="/scripts/index.js"></script>
-</body>
-</html>

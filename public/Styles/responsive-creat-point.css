@@ -1,0 +1,18 @@
+@media (max-width: 600px) {
+   .items-grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+@media (max-width: 400px) {
+   .items-grid {
+      grid-template-columns: 1fr;
+   }
+
+   form legend span {
+      font-size: 12px;
+   }
+   
+   form button {
+      width: 214px;
+   }
+}

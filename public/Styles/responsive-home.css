@@ -1,0 +1,34 @@
+@media (max-width: 500px) {
+   #page-home .content main h1 {
+      font-size: 42px;
+   }
+
+   #page-home .content main p {
+      font-size: 20px;
+   }
+
+   #page-home main a {
+      max-width: 290px;
+      height: 55px;
+   }
+
+   #page-home main a span {
+      height: 55px;
+   }
+}
+
+@media (max-width: 360px)  {
+   #page-home main a {
+      margin-top: 12px;
+   }
+
+   #page-home header > a {
+      margin-bottom: -10px;
+      font-size: 11px;
+   }
+   #page-home header a span {
+      position: absolute;
+      left: -29px;
+      top: -3px;
+   }
+}
