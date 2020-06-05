@@ -34,7 +34,11 @@
                      </div>
                      <div class="field">
                         <label for="address2">Imagem da entidade</label>
-                        <input type="url" name="image" placeholder="http://" required>
+                        <input 
+                        type="url" 
+                        name="image" 
+                        placeholder="http://" 
+                        required>
                      </div>
                   </div>
 
@@ -116,8 +120,9 @@
                <button type="submit">Cadastrar ponto de coleta</button>
 
             </form>
-    {% endblock content %}
+   {% endblock content %}
 
    {% block scripts %}
+
       <script src="scripts/create-point.js"></script>
   {% endblock scripts %}

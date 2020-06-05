@@ -12,8 +12,6 @@ nunjucks.configure("src/views", {
    noCache: true
 })
 
-
-
 // Configurar caminhos da minha aplicação
 // Página inicial
 // req => requisição
