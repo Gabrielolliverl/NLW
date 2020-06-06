@@ -1,55 +1,50 @@
-@media (min-width: 1366px){
-   #page-home {
-     background-size: 50%; 
-     background-position: 40vw bottom; 
-   }
- }
-@media (min-width: 900px){
-   #page-home {
-     background-size: 50%; 
-     background-position: 540px 170px;
-   }
- }
-
 @media (max-width: 900px) {
-   #page-home {
-      background-position-x: 70vw;
-   }
+    #page-home {
+        background-position-x: 70vw;
+    }
 
-   #page-home .content {
-      align-items: center;
-      text-align: center;
-   }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
 
-   #page-home header a {
-      position: absolute;
-      bottom: 48px;
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
 
-      left: 50%;
-      transform: translateX(-50%);
-   }
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-   #page-home main {
-      align-items: center;
-   }
+    #page-home main {
+        align-items: center;
+    }
 
-   #page-create-point .field-group {
-      flex-direction: column;
-   }
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
 
-   #page-create-point .field-group .field + .field {
-      margin-left: 0;
-   }
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+    #page-create-point .field-group {
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field {
+        margin-left: 0;
+    }
 }
 
-@media (max-width: 730px) {
-   main .cards {
-      grid-template-columns: 1fr 1fr;
-   }
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 40vw;
+    }
 }
 
-@media (max-width: 500px) {
-   main .cards {
-      grid-template-columns: 1fr;
-   }
+@media (max-height: 760px) {
+    #page-home {
+        background-position-y: 200px;
+    }
 }

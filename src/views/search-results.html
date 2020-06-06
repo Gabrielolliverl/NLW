@@ -1,49 +1,57 @@
-<!--Usando nunjcks tamplate engine para criar herança-->
-{% extends "partials/layout.html" %}
+{% extends "layout.html" %}
 
 {% set pageId = "page-search-results" %}
 
 {% block title %}
-   <title>Resultados da pesquisa</title>
+    <title>Resultado da pesquisa</title>
+
 {% endblock title %}
 
 {% block styles %}
-   <link rel="stylesheet" href="/styles/search-results.css">
+    <link rel="stylesheet" href="/styles/search-results.css">
+
 {% endblock styles %}
 
 {% block content %}
-   {% include "partials/page-header.html" %}
+    {% include "partials/page-header.html" %}
 
-   <main>
+    <main>
 
-      <h4>
-         <strong>2 pontos</strong> encontrados
-      </h4>
+    {% if total > 0 %}
 
-      <div class="cards">
-         <div class="card">
-            <img src="./assets/icones/colectoria.svg" alt="Colectoria">
-            <h1>Colectoria</h1>
-            <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-            <p>
-               Rio do Sul, Santa Catarina <br>
-               Guilherme Gemballa, Jardim América <br>
-               Nº 260.
-            </p>
-         </div>
+        <h4>
+            <strong>{{total}} pontos</strong>
+            encontrados
+        </h4>
 
-         <div class="card">
-            <img src="./assets/icones/papersider.svg" alt="Papersider">
-            <h1>Papersider</h1>
-            <h3>Papéis e Papelão</h3>
-            <p>
-               Rio do Sul, Santa Catarina <br>
-               Guilherme Gemballa, Jardim América <br>
-               Nº 260.
-            </p>
-         </div>
-         
+        <div class="cards">
 
 
-   </main>
+            {% for place in places %}
+
+                <div class="card">
+                    <img src="{{ place.image }}" alt="{{ place.name }}">
+                    <h1>{{ place.name }}</h1>
+                    <h3>{{ place.items }}</h3>
+                    <p>
+                        {{ place.city }}, {{ place.state }}
+                        <br/>
+                        {{ place.address }}
+                        <br/>
+                        {{ place.address2 }}
+                    </p>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    
+    {%else%}
+
+        <h4><strong>Nenhum</strong> local encontrado</h4>
+    
+    {% endif %}
+
+        
+    </main>
 {% endblock content %}
